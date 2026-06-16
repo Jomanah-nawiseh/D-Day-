@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>حمزة & جمانة</title>
+<style>
+body{font-family:Arial,sans-serif;background:#F8F4EE;color:#5A4B3A;text-align:center;margin:0}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;background:#F8F4EE}
+.card{background:white;padding:40px;border-radius:20px;max-width:800px;box-shadow:0 5px 20px rgba(0,0,0,.1)}
+h1{font-size:60px;color:#B89B5E}
+.btn{background:#B89B5E;color:#fff;padding:12px 25px;border-radius:30px;text-decoration:none}
+.count{display:flex;justify-content:center;gap:15px;flex-wrap:wrap}
+.box{background:white;padding:20px;border-radius:15px;min-width:120px}
+.num{font-size:40px;color:#B89B5E}
+</style>
+</head>
+<body>
+<section class="hero"><div class="card">
+<h1>حمزة & جمانة</h1>
+<p>آل النوايسة</p>
+<p>سيبقى الحب أجمل حكايات العمر</p>
+<p>الجمعة 24/07/2026 - 7:30 مساءً</p>
+<a class="btn" href="https://maps.app.goo.gl/yuwu7UAM8k8gaqiK9">الانتقال إلى القاعة</a>
+</div></section>
+<div class="count">
+<div class="box"><div id="d" class="num"></div>يوم</div>
+<div class="box"><div id="h" class="num"></div>ساعة</div>
+<div class="box"><div id="m" class="num"></div>دقيقة</div>
+<div class="box"><div id="s" class="num"></div>ثانية</div>
+</div>
+<h2>QR Code</h2>
+<p>ضعي ملف qr.png هنا</p>
+<script>
+const t=new Date("2026-07-24T19:30:00").getTime();
+setInterval(()=>{let x=t-new Date().getTime();
+d.innerHTML=Math.floor(x/86400000);
+h.innerHTML=Math.floor(x%86400000/3600000);
+m.innerHTML=Math.floor(x%3600000/60000);
+s.innerHTML=Math.floor(x%60000/1000);},1000);
+</script>
+</body></html>
